@@ -25,7 +25,23 @@ Grupo 42
 
 ## 📜 Descrição
 
-*Descreva seu projeto com base no texto do PBL (até 600 palavras)*
+O projeto envolve a análise de dados agrícolas a partir de uma planilha Excel contendo informações sobre áreas plantadas de diferentes tipos de alimentos ao longo de vários anos. As colunas incluem:
+
+- Área Plantada: Tipo de alimento, limites inferior e superior (Linf. e Lsup.).
+- Unidade: Mil ha (hectares).
+- Anos: Áreas plantadas de 2013/14 até 2033/34.
+- TX. Cresc. 2023/24 a 2033/34: Taxa de crescimento.
+- Variação % 2023/24 a 2033/34: Percentual de variação.
+
+O script em R realiza várias tarefas:
+
+- Carregamento de pacotes: Usa o readxl para ler a planilha Excel.
+- Estrutura dos dados: Visualiza a estrutura inicial dos dados.
+- Transformação de Dados: Converte os dados para um formato longo para facilitar análises temporais.
+- Análise Quantitativa: Examina medidas de tendência central e dispersão para o ano de 2023/24.
+- Visualizações: Cria boxplots e histogramas para análises visuais.
+- Categorização: Categoriza a taxa de crescimento em 'Muito Baixo', 'Baixo', 'Médio' e 'Alto'.
+- Análise Qualitativa: Examina a distribuição de tipos de alimentos.
 
 
 ## 📁 Estrutura de pastas
@@ -48,21 +64,28 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 ## 🔧 Como executar o código
 
-*Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase.*
+1. Instalar Pacotes (se necessário):
+Certifique-se de que o pacote readxl está instalado. Isso pode ser feito descomentando a linha install.packages("readxl").
 
+2. Carregar Pacotes:
+Utilize library(readxl) para carregar o pacote necessário.
+
+3. Ler o Arquivo Excel
+
+4. Estrutura dos Dados
+
+5. Transformar em Dados Longos
+
+6. Análise de Variável Quantitativa
+
+7. Categorização
+
+8. Análise de Variável Qualitativa
 
 ## 🗃 Histórico de lançamentos
 
-* 0.5.0 - XX/XX/2024
+* 0.1.0 - 14/04/2022
     * 
-* 0.4.0 - XX/XX/2024
-    * 
-* 0.3.0 - XX/XX/2024
-    * 
-* 0.2.0 - XX/XX/2024
-    * 
-* 0.1.0 - XX/XX/2024
-    *
 
 ## 📋 Licença
 
