@@ -84,7 +84,7 @@ Utilize library(readxl) para carregar o pacote necessário.
 
 ## 🗃 Histórico de lançamentos
 
-* 0.1.0 - 14/04/2022
+* 0.1.0 - 14/04/2025
     * 
 
 ## 📋 Licença
