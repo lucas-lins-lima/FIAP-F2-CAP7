@@ -1,12 +1,10 @@
-# Lucas Lins Lima_RM564628_fase2_cap7
-# Carla Donato Maximo_RM564845_fase2_cap7
-# Ana Carolina Borges Cornachi_RM564678_fase2_cap7
-
-# Carregar pacote necessário
-install.packages("readxl") # Execute apenas se ainda não tiver o readxl instalado
+# LucasLinsLima_RM564628_fase2_cap7
+# CarlaDonatoMaximo_RM564845_fase2_cap7
+# AnaCarolinaBorgesCornachi_RM564678_fase2_cap7
 
 # Carregar o pacote readxl
 library(readxl)
+library(tidyr)
 
 # Ler o arquivo Excel
 dados <- read_excel("Projecoes_do_Agronegocio.xlsx")
