@@ -33,14 +33,14 @@ O projeto envolve a análise de dados agrícolas a partir de uma planilha Excel 
 - TX. Cresc. 2023/24 a 2033/34: Taxa de crescimento.
 - Variação % 2023/24 a 2033/34: Percentual de variação.
 
-Tipos de variáveis presentes na base de dados
+🧩Tipos de variáveis presentes na base de dados
 As variáveis presentes na planilha podem ser classificadas da seguinte forma:
 
-- Variáveis quantitativas discretas:
+🔢 Variáveis quantitativas discretas:
 
 Ano: Representa um intervalo anual (ex: "2023/24", "2033/34") e assume valores numéricos inteiros e separados, sem possibilidade de fração, pois cada ano/ciclo agrícola é contado discretamente.
 
-- Variáveis quantitativas contínuas:
+📏 Variáveis quantitativas contínuas:
 
 Área Plantada: Expressa em mil hectares (mil ha), pode assumir virtualmente qualquer valor dentro de um intervalo, incluindo números fracionários, representando a extensão da área cultivada.
 
@@ -48,19 +48,19 @@ TX. Cresc. 2023/24 a 2033/34: A taxa de crescimento pode assumir valores contín
 
 Variação % 2023/24 a 2033/34: Percentual de variação, também é uma variável quantitativa contínua.
 
-- Variáveis qualitativas nominais:
+🏷️ Variáveis qualitativas nominais:
 
 Tipo de Alimento: Identifica diferentes tipos de alimentos (ex: “Soja”, “Milho”, “Arroz”, etc.), não possui ordem natural de classificação, apenas nomes distintos das categorias analisadas.
 
-- Variáveis qualitativas ordinais:
+⬆️⬇️ Variáveis qualitativas ordinais:
 
 Taxa de Crescimento (Categorizada): Classificada em faixas como “Muito Baixo”, “Baixo”, “Médio” e “Alto”, apresenta uma ordem natural entre as categorias.
 
-Fonte dos dados
+📑 Fonte dos dados
 
 A planilha utilizada para análise foi extraída do portal oficial do governo brasileiro, especificamente do campo “TABELAS GERAIS - PROJEÇÕES DO AGRONEGÓCIO 2023-2024 A 2033-2034”, disponível em: https://www.gov.br/agricultura/pt-br/assuntos/politica-agricola/todas-publicacoes-de-politica-agricola/projecoes-do-agronegocio
 
-O script em R realiza várias tarefas:
+🛠️ O script em R realiza várias tarefas:
 
 - Carregamento de pacotes: Usa o readxl para ler a planilha Excel.
 - Estrutura dos dados: Visualiza a estrutura inicial dos dados.
@@ -90,27 +90,86 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 ## 🔧 Como executar o código
 
-1. Instalar Pacotes (se necessário):
-Certifique-se de que o pacote readxl está instalado. Isso pode ser feito descomentando a linha install.packages("readxl").
+Para rodar a análise exploratória desenvolvida neste projeto, siga as instruções abaixo com atenção:
 
-2. Carregar Pacotes:
-Utilize library(readxl) para carregar o pacote necessário.
+### 1. Clone ou baixe o repositório
 
-3. Ler o Arquivo Excel
+Certifique-se de que todos os arquivos estejam na mesma estrutura de pastas conforme o repositório original. O script e o Excel estão organizados assim:
 
-4. Estrutura dos Dados
+```
+FIAP-F2-CAP7/
+├── document/
+│   └── Projecoes_do_Agronegocio.xlsx
+├── scripts/
+│   └── Resolucao.R
+...
+```
 
-5. Transformar em Dados Longos
+### 2. Abra o RStudio e defina o diretório de trabalho
 
-6. Análise de Variável Quantitativa
+Você pode definir o diretório manualmente com o comando abaixo, substituindo pelo caminho do seu computador:
 
-7. Categorização
+```r
+setwd("caminho/para/FIAP-F2-CAP7")
+```
 
-8. Análise de Variável Qualitativa
+> 💡 Dica: Se estiver usando o RStudio, é recomendado abrir o projeto pela raiz (com um arquivo `.Rproj`), assim o diretório de trabalho é configurado automaticamente.
+
+### 3. Instale os pacotes necessários
+
+Caso ainda não tenha os pacotes `readxl` e `tidyr`, instale-os com:
+
+```r
+install.packages("readxl")
+install.packages("tidyr")
+```
+
+E depois carregue-os no início do script:
+
+```r
+library(readxl)
+library(tidyr)
+```
+
+### 4. Execute o script
+
+No console ou pelo RStudio, execute o arquivo localizado em:
+
+```r
+scripts/Resolucao.R
+```
+
+O script já está preparado para carregar a planilha com:
+
+```r
+dados <- read_excel("document/Projecoes_do_Agronegocio.xlsx")
+```
+
+### ⚠️ Em caso de erro de caminho
+
+Se o script retornar:
+
+```
+Error: `path` does not exist: 'Projecoes_do_Agronegocio.xlsx'
+```
+
+Isso indica que o diretório de trabalho está incorreto. Verifique se o `setwd()` foi configurado corretamente e se a estrutura de pastas não foi alterada.
+
+### ✅ Alternativa manual
+
+Se preferir, você também pode apontar diretamente o caminho do arquivo em sua máquina:
+
+```r
+dados <- read_excel("C:/Users/usuario/Downloads/FIAP-F2-CAP7/document/Projecoes_do_Agronegocio.xlsx")
+```
+
+A estrutura e o nome das colunas devem estar iguais ao original para que o restante do script funcione corretamente.
 
 ## 🗃 Histórico de lançamentos
 
 * 0.1.0 - 14/04/2025
+    * 
+* 0.2.0 - 19/04/2025
     * 
 
 ## 📋 Licença
