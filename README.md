@@ -33,6 +33,26 @@ O projeto envolve a análise de dados agrícolas a partir de uma planilha Excel 
 - TX. Cresc. 2023/24 a 2033/34: Taxa de crescimento.
 - Variação % 2023/24 a 2033/34: Percentual de variação.
 
+Tipos de variáveis presentes na base de dados
+As variáveis presentes na planilha podem ser classificadas da seguinte forma:
+
+- Variáveis quantitativas discretas:
+Ano: Representa um intervalo anual (ex: "2023/24", "2033/34") e assume valores numéricos inteiros e separados, sem possibilidade de fração, pois cada ano/ciclo agrícola é contado discretamente.
+
+- Variáveis quantitativas contínuas:
+Área Plantada: Expressa em mil hectares (mil ha), pode assumir virtualmente qualquer valor dentro de um intervalo, incluindo números fracionários, representando a extensão da área cultivada.
+TX. Cresc. 2023/24 a 2033/34: A taxa de crescimento pode assumir valores contínuos (percentuais, positivos ou negativos).
+Variação % 2023/24 a 2033/34: Percentual de variação, também é uma variável quantitativa contínua.
+
+- Variáveis qualitativas nominais:
+Tipo de Alimento: Identifica diferentes tipos de alimentos (ex: “Soja”, “Milho”, “Arroz”, etc.), não possui ordem natural de classificação, apenas nomes distintos das categorias analisadas.
+
+- Variáveis qualitativas ordinais:
+Taxa de Crescimento (Categorizada): Classificada em faixas como “Muito Baixo”, “Baixo”, “Médio” e “Alto”, apresenta uma ordem natural entre as categorias.
+
+Fonte dos dados
+A planilha utilizada para análise foi extraída do portal oficial do governo brasileiro, especificamente do campo “TABELAS GERAIS - PROJEÇÕES DO AGRONEGÓCIO 2023-2024 A 2033-2034”, disponível em: https://www.gov.br/agricultura/pt-br/assuntos/politica-agricola/todas-publicacoes-de-politica-agricola/projecoes-do-agronegocio
+
 O script em R realiza várias tarefas:
 
 - Carregamento de pacotes: Usa o readxl para ler a planilha Excel.
@@ -42,7 +62,6 @@ O script em R realiza várias tarefas:
 - Visualizações: Cria boxplots e histogramas para análises visuais.
 - Categorização: Categoriza a taxa de crescimento em 'Muito Baixo', 'Baixo', 'Médio' e 'Alto'.
 - Análise Qualitativa: Examina a distribuição de tipos de alimentos.
-
 
 ## 📁 Estrutura de pastas
 
