@@ -10,7 +10,7 @@
 Cap 7 - Decolando com ciências de dados - Análise estatística de dados do agro
 
 ## Nome do grupo
-Grupo 42
+Grupo 13
 
 ## 👨‍🎓 Integrantes: 
 - <a href="https://www.linkedin.com/in/anacornachi/">Ana Cornachi</a>
