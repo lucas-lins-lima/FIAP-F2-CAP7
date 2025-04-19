@@ -37,18 +37,18 @@ Tipos de variáveis presentes na base de dados
 As variáveis presentes na planilha podem ser classificadas da seguinte forma:
 
 - Variáveis quantitativas discretas:
-Ano: Representa um intervalo anual (ex: "2023/24", "2033/34") e assume valores numéricos inteiros e separados, sem possibilidade de fração, pois cada ano/ciclo agrícola é contado discretamente.
+   Ano: Representa um intervalo anual (ex: "2023/24", "2033/34") e assume valores numéricos inteiros e separados, sem possibilidade de fração, pois cada ano/ciclo agrícola é contado discretamente.
 
 - Variáveis quantitativas contínuas:
-Área Plantada: Expressa em mil hectares (mil ha), pode assumir virtualmente qualquer valor dentro de um intervalo, incluindo números fracionários, representando a extensão da área cultivada.
-TX. Cresc. 2023/24 a 2033/34: A taxa de crescimento pode assumir valores contínuos (percentuais, positivos ou negativos).
-Variação % 2023/24 a 2033/34: Percentual de variação, também é uma variável quantitativa contínua.
+   Área Plantada: Expressa em mil hectares (mil ha), pode assumir virtualmente qualquer valor dentro de um intervalo, incluindo números fracionários, representando a extensão da área cultivada.
+   TX. Cresc. 2023/24 a 2033/34: A taxa de crescimento pode assumir valores contínuos (percentuais, positivos ou negativos).
+   Variação % 2023/24 a 2033/34: Percentual de variação, também é uma variável quantitativa contínua.
 
 - Variáveis qualitativas nominais:
-Tipo de Alimento: Identifica diferentes tipos de alimentos (ex: “Soja”, “Milho”, “Arroz”, etc.), não possui ordem natural de classificação, apenas nomes distintos das categorias analisadas.
+   Tipo de Alimento: Identifica diferentes tipos de alimentos (ex: “Soja”, “Milho”, “Arroz”, etc.), não possui ordem natural de classificação, apenas nomes distintos das categorias analisadas.
 
 - Variáveis qualitativas ordinais:
-Taxa de Crescimento (Categorizada): Classificada em faixas como “Muito Baixo”, “Baixo”, “Médio” e “Alto”, apresenta uma ordem natural entre as categorias.
+   Taxa de Crescimento (Categorizada): Classificada em faixas como “Muito Baixo”, “Baixo”, “Médio” e “Alto”, apresenta uma ordem natural entre as categorias.
 
 Fonte dos dados
 
