@@ -51,6 +51,7 @@ Tipo de Alimento: Identifica diferentes tipos de alimentos (ex: “Soja”, “M
 Taxa de Crescimento (Categorizada): Classificada em faixas como “Muito Baixo”, “Baixo”, “Médio” e “Alto”, apresenta uma ordem natural entre as categorias.
 
 Fonte dos dados
+
 A planilha utilizada para análise foi extraída do portal oficial do governo brasileiro, especificamente do campo “TABELAS GERAIS - PROJEÇÕES DO AGRONEGÓCIO 2023-2024 A 2033-2034”, disponível em: https://www.gov.br/agricultura/pt-br/assuntos/politica-agricola/todas-publicacoes-de-politica-agricola/projecoes-do-agronegocio
 
 O script em R realiza várias tarefas:
