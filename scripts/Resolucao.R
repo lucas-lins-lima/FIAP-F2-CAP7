@@ -2,12 +2,20 @@
 # CarlaDonatoMaximo_RM564845_fase2_cap7
 # AnaCarolinaBorgesCornachi_RM564678_fase2_cap7
 
-# Carregar o pacote readxl
+# Carregar pacotes necessários
 library(readxl)
 library(tidyr)
 
+# Definir caminho do arquivo de forma compatível com diferentes sistemas operacionais
+file_path <- file.path("document", "Projecoes_do_Agronegocio.xlsx")
+
+# Verificar se o arquivo existe antes de ler
+if (!file.exists(file_path)) {
+  stop("❌ Arquivo Excel não encontrado. Verifique o caminho ou se o diretório de trabalho está correto.")
+}
+
 # Ler o arquivo Excel
-dados <- read_excel("Projecoes_do_Agronegocio.xlsx")
+dados <- read_excel(file_path)
 
 # Observando a estrutura dos dados
 str(dados)
@@ -46,23 +54,25 @@ quartis_area <- quantile(dados_2023$`Área Plantada`, na.rm = TRUE)
 boxplot(dados_2023$`Área Plantada`, main = "Área Plantada 2023/24", ylab = "Mil ha")
 
 # Categorização da Taxa de Crescimento
-dados$tx_crescimento_cat <- cut(dados$`TX. Cresc. 2023/24 a 2033/34`, 
-                                breaks = c(-Inf, -5, 0, 5, Inf), 
-                                labels = c("Muito Baixo", "Baixo", "Médio", "Alto"))
+dados$tx_crescimento_cat <- cut(
+  dados$`TX. Cresc. 2023/24 a 2033/34`, 
+  breaks = c(-Inf, -5, 0, 5, Inf), 
+  labels = c("Muito Baixo", "Baixo", "Médio", "Alto")
+)
 
 # Análise de Variável Qualitativa: 'Tipo de Alimento'
-## Análise Gráfica
 # Crie uma nova coluna para armazenar o tipo de alimento
 dados$`Tipo de alimento` <- NA
 
 # Identifica as linhas que correspondem aos tipos de alimento
 for (i in seq(1, nrow(dados), by = 3)) {
-  # A cada três linhas, a primeira contém o tipo de alimento
   tipo_alimento <- dados$`Área Plantada`[i]
-  
-  # Preenche a nova coluna com o tipo de alimento
   dados$`Tipo de alimento`[i:(i+2)] <- tipo_alimento
 }
 
 # Agora você pode construir o gráfico
-barplot(table(dados$`Tipo de alimento`), main = "Distribuição de Tipos de Alimento", ylab = "Frequência")
+barplot(
+  table(dados$`Tipo de alimento`),
+  main = "Distribuição de Tipos de Alimento",
+  ylab = "Frequência"
+)
